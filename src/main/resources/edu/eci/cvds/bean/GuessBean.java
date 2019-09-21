@@ -10,8 +10,8 @@ import java.util.Random;
 import javax.faces.bean.*;
 
 @ManagedBean(name = "GuessBean") 
-//@ApplicationScoped 
-@SessionScoped
+@ApplicationScoped 
+//@SessionScoped
 public class GuessBean {
     
     //Atributos
