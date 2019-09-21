@@ -14,6 +14,3 @@ jobs:
       - run:
           name: Print the Current Time
           command: date
-
-      # run tests!
-      - run: mvn integration-test
