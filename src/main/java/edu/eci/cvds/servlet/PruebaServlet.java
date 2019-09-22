@@ -47,13 +47,13 @@ public class PruebaServlet extends HttpServlet{
                 responseWriter.flush();
             }catch (Exception e){
                 resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
-                responseWriter.write("Requerimiento inválido.");
+                responseWriter.write("Requerimiento invï¿½lido.");
                 responseWriter.flush();
             }
             
         }else{
             resp.setStatus(HttpServletResponse.SC_NOT_FOUND);
-            responseWriter.write("Requerimiento inválido.");
+            responseWriter.write("Requerimiento invï¿½lido.");
             responseWriter.flush();
         }   
     }
@@ -86,13 +86,12 @@ public class PruebaServlet extends HttpServlet{
                 responseWriter.flush();
             }catch (Exception e){
                 resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
-                responseWriter.write("Requerimiento inválido.");
+                responseWriter.write("Requerimiento invï¿½lido.");
                 responseWriter.flush();
             }
-            
         }else{
             resp.setStatus(HttpServletResponse.SC_NOT_FOUND);
-            responseWriter.write("Requerimiento inválido.");
+            responseWriter.write("Requerimiento invï¿½lido.");
             responseWriter.flush();
         }     
     }
