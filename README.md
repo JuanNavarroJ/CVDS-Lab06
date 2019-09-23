@@ -4,7 +4,7 @@
 
 ### Heroku
 
-https://github.com/JuanNavarroJ/CVDS-Lab06.git
+https://cvds-lab-06.herokuapp.com/faces/guess.xhtml
 
 ### CircleCI
 	
