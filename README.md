@@ -2,6 +2,10 @@
 
 ## IntroducciónCI
 
+### Heroku
+
+https://github.com/JuanNavarroJ/CVDS-Lab06.git
+
 ### CircleCI
 	
 [![CircleCI](https://circleci.com/gh/JuanNavarroJ/CVDS-Lab06.svg?style=svg)](https://circleci.com/gh/JuanNavarroJ/CVDS-Lab06)
