@@ -17,4 +17,4 @@ https://cvds-lab-06.herokuapp.com/faces/guess.xhtml
 ### Autores:
 
 - Eduardo Ocampo
-- Juan David Navarro
+- Juan David Navarro 
