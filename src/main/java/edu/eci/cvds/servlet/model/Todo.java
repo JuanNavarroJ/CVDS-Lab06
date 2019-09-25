@@ -11,10 +11,6 @@ public class Todo {
     private String title;
     private boolean completed;
     
-    public Todo (){
-        
-    }
-    
     /**
      * Metodo que permite consultar el id del usuario.
      * @return  Retorna el userID.

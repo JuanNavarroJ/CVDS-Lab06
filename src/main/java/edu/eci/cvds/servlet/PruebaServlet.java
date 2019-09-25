@@ -64,7 +64,7 @@ public class PruebaServlet extends HttpServlet{
         Optional<String> optName = Optional.ofNullable(req.getParameter("id"));
         String param = optName.isPresent() && !optName.get().isEmpty() ? optName.get() : "";
         
-        if(param != "" ){
+        if(param.equals("")){
             try{
                 int paramInt = Integer.parseInt(param);
                 if(paramInt<=200 && paramInt >=1 ){

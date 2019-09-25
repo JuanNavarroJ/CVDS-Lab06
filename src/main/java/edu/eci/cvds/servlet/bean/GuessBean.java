@@ -3,15 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.eci.cvds.bean;
+package edu.eci.cvds.servlet.bean;
 
-import java.util.ArrayList;
+
 import java.util.Random;
-import javax.faces.bean.*;
+import javax.faces.bean.ApplicationScoped;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
 
 @ManagedBean(name = "GuessBean") 
-@ApplicationScoped 
-//@SessionScoped
+//@ApplicationScoped 
+@SessionScoped
 public class GuessBean {
     
     //Atributos
@@ -33,7 +35,7 @@ public class GuessBean {
      */
     public void guess(int numeroUsuario){
         
-        if(acumulado > 0 && estado!="gano" && numeroUsuario>=0 && numeroUsuario<=20){
+        if(acumulado > 0 && estado.equals("gano") && numeroUsuario>=0 && numeroUsuario<=20){
             if(numeroUsuario == numero){
                 intentos++;
                 estado="gano";
@@ -45,7 +47,7 @@ public class GuessBean {
                 intentosFallidos += " " + String.valueOf(numeroUsuario)+",";
             }
         }else{
-            if(estado!="gano" && numeroUsuario>=0 && numeroUsuario<=20 ){
+            if(estado.equals("gano") && numeroUsuario>=0 && numeroUsuario<=20 ){
                 estado="Perdio y no tiene mas intentos.";
             }
         }
