@@ -4,7 +4,7 @@
 
 ### Heroku
 
-https://cvds-lab-06.herokuapp.com/faces/guess.xhtml
+https://cvds-lab-6.herokuapp.com/faces/guess.xhtml
 
 ### CircleCI
 	
