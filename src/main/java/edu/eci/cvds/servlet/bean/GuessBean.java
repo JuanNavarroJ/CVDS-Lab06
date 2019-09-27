@@ -35,7 +35,7 @@ public class GuessBean {
      */
     public void guess(int numeroUsuario){
         
-        if(acumulado > 0 && estado.equals("gano") && numeroUsuario>=0 && numeroUsuario<=20){
+        if(acumulado > 0 && !estado.equals("gano") && numeroUsuario>=0 && numeroUsuario<=20){
             if(numeroUsuario == numero){
                 intentos++;
                 estado="gano";
@@ -47,14 +47,16 @@ public class GuessBean {
                 intentosFallidos += " " + String.valueOf(numeroUsuario)+",";
             }
         }else{
-            if(estado.equals("gano") && numeroUsuario>=0 && numeroUsuario<=20 ){
+            if(!estado.equals("gano") && numeroUsuario>=0 && numeroUsuario<=20 ){
                 estado="Perdio y no tiene mas intentos.";
+            }else if(!estado.equals("gano") && numeroUsuario<0 || numeroUsuario>20){
+                estado="El numero debe estar entre 0 y 20.";
             }
         }
     }
     
     /**
-     * This method vadidate if the entance of the method is a int or a string
+     * This method validate if the entrance of the method is a int or a string
      * @param numeroUsuario  number that the user wants to guess
      */
     public void guess(String numeroUsuario){

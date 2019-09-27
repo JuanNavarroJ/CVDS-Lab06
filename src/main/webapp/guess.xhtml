@@ -3,21 +3,91 @@
 xmlns:h="http://xmlns.jcp.org/jsf/html"
 xmlns:p="http://primefaces.org/ui">
     <h:head>
+    <style>
+        body{
+            background: rgba(117,189,209,1);
+background: -moz-linear-gradient(left, rgba(117,189,209,1) 0%, rgba(109,184,206,1) 19%, rgba(96,177,200,0) 48%, rgba(91,175,198,0) 59%, rgba(81,169,194,1) 82%, rgba(73,165,191,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(117,189,209,1)), color-stop(19%, rgba(109,184,206,1)), color-stop(48%, rgba(96,177,200,0)), color-stop(59%, rgba(91,175,198,0)), color-stop(82%, rgba(81,169,194,1)), color-stop(100%, rgba(73,165,191,1)));
+background: -webkit-linear-gradient(left, rgba(117,189,209,1) 0%, rgba(109,184,206,1) 19%, rgba(96,177,200,0) 48%, rgba(91,175,198,0) 59%, rgba(81,169,194,1) 82%, rgba(73,165,191,1) 100%);
+background: -o-linear-gradient(left, rgba(117,189,209,1) 0%, rgba(109,184,206,1) 19%, rgba(96,177,200,0) 48%, rgba(91,175,198,0) 59%, rgba(81,169,194,1) 82%, rgba(73,165,191,1) 100%);
+background: -ms-linear-gradient(left, rgba(117,189,209,1) 0%, rgba(109,184,206,1) 19%, rgba(96,177,200,0) 48%, rgba(91,175,198,0) 59%, rgba(81,169,194,1) 82%, rgba(73,165,191,1) 100%);
+background: linear-gradient(to right, rgba(117,189,209,1) 0%, rgba(109,184,206,1) 19%, rgba(96,177,200,0) 48%, rgba(91,175,198,0) 59%, rgba(81,169,194,1) 82%, rgba(73,165,191,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#75bdd1', endColorstr='#49a5bf', GradientType=1 );
+        }
+        
+        h1{
+            font-size: 500%;
+            font-family: Georgia, 'Times New Roman', serif;
+            color: #000;
+            text-align: center;
+            font-weight: 100;
+        }
+        .buttons{
+            border: none;
+            color: black;
+            padding: 16px 32px;
+            text-align: center;
+            font-size: 16px;
+            margin: 4px 2px;
+            opacity: 0.6;
+            transition: 0.3s;
+            display: inline-block;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    
+    input[type=text] {
+      width: 60%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: 3px solid #ccc;
+      -webkit-transition: 0.5s;
+      transition: 0.5s;
+      outline: none;
+    }
+
+    input[type=text]:focus {
+      border: 3px solid #555;
+    }
+    body {
+        text-align: center;
+    }
+    form {
+    font-style: italic;
+    font-variant: small-caps;
+    color: #000;
+    border : 1px solid #000;
+    background-color : #9cf;
+    color : #000;
+    margin:auto;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    }
+    </style>
     </h:head>
     <h:body>
+        <h1 align="center">Guess the number</h1>
      <h:form id="guess_form" >
-         <p:panelGrid columns = "6">
-         <p:inputText  id="numeroUsuario" binding="#{numeroUsuario}"></p:inputText>
          <p:outputLabel value="Intentos: #{GuessBean.intentos}"> </p:outputLabel>
+         <p></p>
          <p:outputLabel value="Estado: #{GuessBean.estado}"> </p:outputLabel>
+         <p></p>
          <p:outputLabel value="Acumulado: #{GuessBean.acumulado}"> </p:outputLabel>
+         <p></p>
          <p:outputLabel value="Numeros Fallidos: #{GuessBean.intentosFallidos}"> </p:outputLabel>
+         <p></p>
          <p:outputLabel style="display:none " value="#{GuessBean.numero}"> </p:outputLabel>
-         
-         
-         <p:commandButton update="guess_form" actionListener="#{GuessBean.guess(numeroUsuario.value)}" value="Jugar"></p:commandButton>
-         <p:commandButton update="guess_form" actionListener="#{GuessBean.restart}" value="Reiniciar"></p:commandButton>
-         </p:panelGrid>
+         <p></p>
+         <p:inputText id="numeroUsuario" binding="#{numeroUsuario}"></p:inputText>
+         <p></p>
+         <div class="buttons">
+            <p:commandButton update="guess_form" actionListener="#{GuessBean.guess(numeroUsuario.value)}" value="Jugar"></p:commandButton>
+            <p:commandButton update="guess_form" actionListener="#{GuessBean.restart}" value="Reiniciar"></p:commandButton>
+         </div>
      </h:form>
     </h:body>
 </html>

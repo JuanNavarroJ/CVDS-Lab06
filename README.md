@@ -12,9 +12,8 @@ https://cvds-lab-6.herokuapp.com/faces/guess.xhtml
 
 ### Codacy
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/93fa0265522a47b784a4bdb96c6e0fe6)](https://www.codacy.com/manual/JuanNavarroJ/CVDS-Lab06?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=JuanNavarroJ/CVDS-Lab06&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/230c63ce18bb4eeca20529260cf1686c)](https://www.codacy.com/manual/JuanNavarroJ/CVDS-Lab06?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=JuanNavarroJ/CVDS-Lab06&amp;utm_campaign=Badge_Grade)
 
 ### Autores
-
- - Eduardo Ocampo
- - Juan David Navarro 
+- Eduardo Ocampo
+- Juan David Navarro 
